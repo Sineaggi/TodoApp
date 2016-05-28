@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "embed": "Views/**",
+    "preserveCompilationContext": true,
+    "emitEntryPoint": true,
+    "copyToOutput": {
+      "include": [ "wwwroot", "Views" ]//,
+      // "includeFiles": [ "appsettings.json", "web.config" ]
+    },
+    "compile": [
+      "wwwroot"
+    ]
+  },
+  "publishOptions": {
+    "include": [ "wwwroot", "Views" ]//,
+    // "includeFiles": [ "appsettings.json", "web.config" ]
+  },
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0-rc2-3002702"
+    },
+    
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.Kestrel.Https": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-*",
+    "Microsoft.Framework.Configuration": "1.0.0-*",
+    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-*",
+    "Microsoft.Framework.Configuration.Binder": "1.0.0-*",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-*",
+    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final"
+    //"EntityFramework.Commands": "7.0.0-rc1-final"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}
