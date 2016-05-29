@@ -22,3 +22,48 @@
     <a href="#" onclick="EditTask()" class="btn btn-primary btn-large" role="button">Edit Task</a>
     <a href="#" onclick="DeleteTask()" class="btn btn-primary btn-large" role="button">Delete Task</a>
 </div>
+
+<ul id="task-list-group" class="list-group">
+  <li class="list-group-item">
+      Cras justo odio
+      <button type="button" onclick="TogglePopovernte(this)" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </li>
+</ul>
+
+<div class="input-group">
+    <input id="task-create-input" type="text" class="form-control" placeholder="Enter task...">
+    <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" onclick="CreateTask(this)">Submit!</button>
+    </span>
+</div>
+
+<!-- Example task -->
+
+<div id="task" hidden>
+<li class="list-group-item" id="plac">
+    <a href="#" id="task-link" onclick="TogglePopover(this)">ah</a>
+      <button type="button" onclick="RemoveTask(this)" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </li>
+</div>
+
+<!-- Task edit-->
+
+<div id="task_edit_content" hidden>
+    <div class="input-group">
+        <input type="text" class="form-control" id="task_edit_input" placeholder="Enter task description here...">
+        <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">Update!</button>
+        </span>
+    </div>
+</div>
+
+<div id="task_edit_header" hidden>
+    Update Task
+    <button type="submit" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>

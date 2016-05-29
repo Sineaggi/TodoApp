@@ -1,4 +1,3 @@
 {
-  //"webroot" :  "AppWebRoot"
   "webroot": "wwwroot"
 }
