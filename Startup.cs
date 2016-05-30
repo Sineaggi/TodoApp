@@ -7,13 +7,18 @@ using Microsoft.Framework.Configuration;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace TodoApp
 {
     public class Startup
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory logger)
+        public void Configure(IApplicationBuilder app, ILoggerFactory logger, IHostingEnvironment env)
         {
+            //if (env.IsDevelopment()) {
+                app.UseDeveloperExceptionPage();
+            //}
+            
             logger.AddConsole();
             
             app.UseStaticFiles();
